@@ -15,23 +15,32 @@ Delimitar o que será desenvolvido e as funcionalidades principais:
 - Cálculo automático do valor total dos serviços
 - Consulta de ordens de serviço por status, período ou veículo
 
-### Requisitos Funcionais e Não Funcionais
+## Demonstração do Sistema
 
-**Requisitos Funcionais:**
-- RF01: Cadastrar clientes com CPF único
-- RF02: Cadastrar veículos vinculados a clientes
-- RF03: Criar ordens de serviço para veículos
-- RF04: Adicionar serviços a uma ordem de serviço
-- RF05: Consultar ordens de serviço por status, período ou veículo
-- RF06: Fechar ordem de serviço com data de conclusão
-- RF07: Calcular valor total da ordem de serviço
+---
 
-**Requisitos Não Funcionais:**
-- RNF01: Utilizar Clean Architecture para separação de responsabilidades
-- RNF02: Utilizar Entity Framework Core para persistência de dados
-- RNF03: Implementar tratamento de exceções adequado
-- RNF04: Validar dados antes de persistir no banco de dados
-- RNF05: Utilizar SQL Server como banco de dados
+### Terminal
+![Tela do terminal](img/terminal.png)
+
+---
+
+### Tela Web
+![Interface](img/interface.png)
+
+---
+
+### Cadastro de Cliente
+![Tela de cadastro de cliente](img/cadastro_cliente.png)
+
+---
+
+### Cadastro de Veículo
+![Tela de cadastro de veículo](img/cadastro_veiculo.png)
+
+---
+
+### Cadastro de Ordem de Serviço
+![Tela de cadastro de ordem de serviço](img/cadastro_ordem_servico.png)
 
 ## Desenho da Arquitetura
 
@@ -79,27 +88,6 @@ Considerar o uso de uma arquitetura limpa para separar responsabilidades e mante
 - Status da ordem de serviço controlado por enum
 - Cálculo automático do valor total da ordem de serviço
 
-#### Infraestrutura
-**Acesso a dados, integração com outras APIs, etc.**
-
-**Mapeamento de Entidades (Entity Framework Core):**
-- Configurar o EF Core para mapear as entidades para tabelas do banco de dados
-- Definição de chaves primárias e estrangeiras
-- Definição de relacionamentos (1:N entre Cliente-Veiculo, Veiculo-OrdemServico, OrdemServico-Servico)
-- Validações de campos obrigatórios e tamanhos máximos
-- Índices únicos (CPF do Cliente, Placa do Veículo)
-
-**Repositórios Concretos:**
-- `Repository<T>` - Implementação genérica base com operações CRUD usando EF Core
-- `ClienteRepository` - Implementação concreta do repositório de clientes
-- `VeiculoRepository` - Implementação concreta do repositório de veículos
-- `OrdemServicoRepository` - Implementação concreta do repositório de ordens de serviço
-
-**Integrações Externas:**
-- `ExternalApiClient` - Cliente HTTP para integração com APIs externas (se necessário)
-
-**Migrações de Banco de Dados:**
-- Configurar e aplicar migrações para manter o esquema do banco de dados sincronizado com as entidades
 
 ## Tecnologias Utilizadas
 
