@@ -42,11 +42,6 @@ Delimitar o que será desenvolvido e as funcionalidades principais:
 ### Cadastro de Ordem de Serviço
 ![Tela de cadastro de ordem de serviço](img/cadastro_ordem_servico.png)
 
-## Desenho da Arquitetura
-
-### Clean Architecture
-Considerar o uso de uma arquitetura limpa para separar responsabilidades e manter o código desacoplado.
-
 ### Camadas da Aplicação
 
 #### Aplicação
