@@ -20,7 +20,8 @@ Delimitar o que será desenvolvido e as funcionalidades principais:
 ---
 
 ### Terminal
-![Tela do terminal](img/terminal.png)
+![Tela do terminal](assets/img/terminal.png)
+
 
 ---
 
